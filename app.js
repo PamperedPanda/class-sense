@@ -12,7 +12,8 @@ app.get("/", function(req, res){
 });
 
 app.post("/location", function(req, res){
-	res.send
+	var address = req.body.address
+	https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Par
 });
 
 app.listen(5000, function(){
