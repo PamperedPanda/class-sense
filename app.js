@@ -14,7 +14,9 @@ app.get("/", function(req, res){
 
 app.post("/location", function(req, res){
 	var address = req.body.address
-	request("https://maps.googleapis.com/maps/api/geocode/json?address=" + address, function(err, res, body))
+	request("https://maps.googleapis.com/maps/api/geocode/json?address=" + address, function(err, res, body){
+		
+	})
 });
 
 app.listen(5000, function(){
