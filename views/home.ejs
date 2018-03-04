@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Class-Sense</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script type="text/javascript" src = "locationHandler.js"></script>
-</head>
-<body>
-	<h1>Welcome to Class Sense!</h1>
-	<form action="/location" method="POST">
-      	<input type="text" name="address" id="address">
-      	<label for="address">Address: </label>
-      	<input type="submit" name="submit" id="submitButton">
-    </form>
-	<style>
-       #map {
-        height: 600px;
+  <head>
+    <style>
+      #map {
+        height: 650px;
         width: 100%;
        }
     </style>
-    <h3>My Google Maps Demo</h3>
+  </head>
+  <body>
+    <h3>My Campus Guide</h3>
+    <button onclick="myFunction()">Click to Enter Address</button>
+
+  <p id="demo"></p>
+
+  <script>
+function myFunction() {
+    var address = prompt("Please enter your address", "Address");
+    while (address != null) {
+        document.getElementById("demo").innerHTML =
+        "Is your address " + address + "?";
+    }
+}
+  </script>
+  <button onclick="myFun()">Click here to confirm!</button>
+  <p id="demo"></p>
+
+  <script>
+function myFun() {
+    var yes = prompt("Yes or No?", "______");
+    if (yes === yes) {
+        document.getElementById("demo").innerHTML =
+        "Yay";
+    }
+}
+  </script>
+
     <div id="map"></div>
     <script>
       function initMap() {
-<<<<<<< HEAD
-      	coordinates = findCoordinates(document.getElementById("address").value);
-        var uluru = {coordinates[0], coordinates[1]};
-=======
         var pullman = {lat: 46.7298, lng: -117.1817};
->>>>>>> 286d8e27b5c3a1591d34e84e88305103cbcd61e4
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
+          zoom: 6,
           center: pullman
         });
         var marker = new google.maps.Marker({
@@ -37,15 +49,9 @@
           map: map
         });
       }
-      </script>
-
-		<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-		<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2UZjDTBGUwMrHxe3sBoJF3kwyMJmqnZM&callback=initMap">
-  </script>
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvzUI0_Ju5uEFGSYt8ZhHpFKvth6CNTSA &callback=initMap">
+    </script>
   </body>
 </html>
