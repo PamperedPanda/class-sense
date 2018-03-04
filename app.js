@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require("body-parser");
+var request = require("request");
 
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -13,7 +14,9 @@ app.get("/", function(req, res){
 
 app.post("/location", function(req, res){
 	var address = req.body.address
-	https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Par
+	request("https://maps.googleapis.com/maps/api/geocode/json?address=" + address, function(err, res, body){
+		
+	})
 });
 
 app.listen(5000, function(){
