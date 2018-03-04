@@ -6,7 +6,7 @@
 	<script type="text/javascript" src = "locationHandler.js"></script>
 </head>
 <body>
-	<h1>Welcome to our webpage!</h1>
+	<h1>Welcome to Class Sense!</h1>
 	<form action="/location" method="POST">
       	<input type="text" name="address" id="address">
       	<label for="address">Address: </label>
@@ -14,7 +14,7 @@
     </form>
 	<style>
        #map {
-        height: 400px;
+        height: 600px;
         width: 100%;
        }
     </style>
@@ -22,14 +22,18 @@
     <div id="map"></div>
     <script>
       function initMap() {
+<<<<<<< HEAD
       	coordinates = findCoordinates(document.getElementById("address").value);
         var uluru = {coordinates[0], coordinates[1]};
+=======
+        var pullman = {lat: 46.7298, lng: -117.1817};
+>>>>>>> 286d8e27b5c3a1591d34e84e88305103cbcd61e4
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
-          center: uluru
+          center: pullman
         });
         var marker = new google.maps.Marker({
-          position: uluru,
+          position: pullman,
           map: map
         });
       }
